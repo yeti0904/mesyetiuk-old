@@ -1,0 +1,19 @@
+body {
+    background-color: #333333;
+    color: #cccccc;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a {
+    color: inherit;
+}
+.box {
+    background-color: #434343;
+    border-style: solid;
+    border-radius: 5px;
+    width: 100% - 15px;
+    padding: 5px;
+    margin: 5px;
+}
+.title {
+    text-align: center;
+}

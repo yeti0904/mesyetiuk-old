@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Colour picker</title>
+		<meta name="og:title" content="Colour picker">
+		<meta name="og:description" content="omg you can play with colour">
+		<link rel="stylesheet" href="/resources/style.css">
+		<style>
+			.colourbox {
+				background-color: rgb(0, 0, 0);
+				width: 250px;
+				height: 250px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="title">Colour picker</h1>
+		<a href="/"><p class="title">Back to home</p></a>
+		<div class="box">
+			<h2>Use the sliders to select a colour</h2>
+			<div class="colourbox" id="colourbox"></div>
+			R
+			<input type="range" min="1" max="255" value="0" class="slider" id="r"><br>
+			G
+			<input type="range" min="1" max="255" value="0" class="slider" id="g"><br>
+			B 
+			<input type="range" min="1" max="255" value="0" class="slider" id="b"><br>
+			<p id="rgbval"></p>
+		</div>
+		<script>
+			var r, g, b;
+			setInterval(function(){
+				r = String(document.getElementById("r").value);
+				g = String(document.getElementById("g").value);
+				b = String(document.getElementById("b").value);
+				document.getElementById("colourbox")
+				.style["background-color"] = `rgb(${r},${g},${b})`;
+				document.getElementById("rgbval")
+				.innerHTML = `RGB: ${r}, ${g}, ${b}`;
+			}, 50)
+		</script>
+	</body>
+</html>
